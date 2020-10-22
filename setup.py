@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 
-setup(name='keycloak_oauth',
+setup(name='keycloakoauth',
       version='1.0',
       description='Keycloak OAuth for Jupyterhub',
       author='Andrew Zah',
