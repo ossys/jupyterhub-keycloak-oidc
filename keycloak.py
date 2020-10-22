@@ -1,5 +1,5 @@
 """
-Custom Authenticator to use generic OAuth2 with JupyterHub
+Custom Authenticator to use KeyCloak with JupyterHub
 """
 
 import json
@@ -22,7 +22,7 @@ from .traitlets import Callable
 from .oauth2 import OAuthLoginHandler, OAuthenticator
 
 class KeycloakOAuthenticator(OAuthenticator):
-    login_service = Unicode("KeyCLoak OAuth", config=True)
+    login_service = Unicode("Keycloak OAuth", config=True)
 
     extra_params = Dict(help="Extra parameters for first POST request").tag(config=True)
 
