@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='keycloakoauth',
-      version='1.0',
+      version='1.0.0',
       description='Keycloak OAuth for Jupyterhub',
       author='Andrew Zah',
       author_email='zah@andrewzah.com',
