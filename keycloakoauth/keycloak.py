@@ -88,12 +88,18 @@ class KeycloakOAuthenticator(OAuthenticator):
         else:
             url = self.token_url
 
+        if not self.scope:
+            scope = "openid profile email roles"
+        else:
+            scope = self.scope
+
         params = dict(
             redirect_uri=self.get_callback_url(handler),
             code=code,
             grant_type='authorization_code',
             client_id=client_id,
             client_secret=client_secret,
+            scope=scope,
         )
         params.update(self.extra_params)
 
